@@ -48,7 +48,7 @@ Game::~Game()
 
 
 
-//Get random block for normal mode, chaos mode, and all the chaos effects
+//Get random block for normal mode, chaos mode, and all the chaos effectss
 Block Game::GetRandomBlock()
 {
 	canHold = true;
@@ -105,7 +105,7 @@ std::vector<Block> Game::GetAllBlocks()
 	std::vector<Block> blocks;
 
 	if (gameState == CHAOS_MOD) {
-		blocks = { IBlock(), JBlock(), SBlock(), TBlock(), LBlock(), ZBlock(), OBlock(), FBlock(), };
+		blocks = { IBlock(), JBlock(), SBlock(), TBlock(), LBlock(), ZBlock(), OBlock() };
 	}
 	else {
 		blocks = { IBlock(), JBlock(), SBlock(), TBlock(), LBlock(), ZBlock(), OBlock() };
@@ -120,7 +120,7 @@ std::vector<Block> Game::GetAllBlocks()
 			blocks.push_back(IBlock());
 		}
 		if (isPentrix) {
-			blocks.insert(blocks.end(), { PenTBlock(), PBlock(), PenIBlock(), UBlock(), PenSBlock(), PenZBlock(), PenLBlock(), PenJBlock()});
+			blocks.insert(blocks.end(), { PenTBlock(), PBlock(), PenIBlock(), UBlock(), PenSBlock(), PenZBlock(), PenLBlock(), PenJBlock(), FBlock()});
 		}
 		if (isRain)
 		{
